@@ -1,0 +1,31 @@
+/* Menu Bar */
+#favicon{
+  display: none;
+ }
+
+.ms-cui-ribbonTopBars {
+    display: none !important;
+  }
+  
+  #s4-ribbonrow {
+    display: none !important;
+  }
+  
+  .ms-cui-tabContainer {
+    display: none !important;
+  } 
+
+/* Body DIVE */
+#body {
+    /* z-index: -1 !important; */
+  }
+  .card{
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, .96)), url("https://dokumen.bi.go.id/sites/Workspace_Dev/WebPart/asset/image/searc-card-bg.png?csf=1&e=tUychh");
+    background-repeat: no-repeat;
+    background-position: 234px 25px;
+    background-size: 120px;
+    width: 350px;
+    min-width: 350px !important;
+    max-width: 350px !important;
+    background-blend-mode: normal;
+  }

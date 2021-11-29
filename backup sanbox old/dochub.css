@@ -1,0 +1,1792 @@
+/* Start Check Orientasi */
+@media only screen and (orientation:portrait){
+  .metadata-overlay{display: none}
+  #checkorientation {display: inline-block;}
+  #warningPotrait {display: inline-block;}
+  #imgUbahPotrait {display: inline-block;}
+  #textPotrait {display: inline-block;}
+}
+
+@media only screen and (orientation:landscape){
+  #checkorientation {display: none;}
+  #warningPotrait {display: none;}
+  #imgUbahPotrait {display: none;}
+  #textPotrait {display: none;}
+}
+
+#checkorientation{
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: black;
+  opacity: 80%;
+}
+
+#imgUbahPotrait{
+  position: fixed;
+  height: 50vh;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+#textPotrait{
+  margin: auto;
+  color: white;
+  position: fixed;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -70%);
+  z-index: 50;
+  text-align: center;
+  font-size: 2vh;
+  width: 100%;
+}
+
+#warningPotrait{
+  display: inline-block;
+}
+
+/* END Check Orientasi */
+
+html, body { 
+    height: 100%; width: 100%; margin: 0; 
+    font-family: 'Segoe UI';
+}
+
+.isiNamaFile::selection {
+  background: #D6212A; /* WebKit/Blink Browsers */
+}
+
+#bulletSearch{
+  list-style-type: disc; 
+  list-style-position: inside; 
+}
+
+#searchKosong{
+  font-size: 1em;
+  margin-left: 1vw;
+}
+
+    /* On site page hide left navigation menu */  
+     
+    #sideNavBox {  
+        display: none;  
+    }  
+    /* adjust position of content on site page */  
+    #siteIcon{
+        display: none;  
+    }
+    #titleAreaRow{
+        display: none; 
+    }
+    #contentBox{
+        margin-left: 0; 
+    }
+
+/* START Splash Screen */
+.intro{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #045498;
+    transition: 1s;
+    display: none;
+}
+
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    font-size: 10vw;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+/* END Splash Screen */
+#selimut{
+  background-color:transparent;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 999;
+}
+.list-menu {
+    list-style-type: none;
+    padding-left: 0%;
+    margin-left: 0%;
+    margin-top: 3%;   
+}
+.list-folder{
+    padding-top: 0%;
+    padding-left: 0%;
+    margin-left: 0%;
+    margin-top: 0%;  
+}
+.box-wrapper {
+    margin: 0;
+    margin-top: 0.4%;
+    background-color: #FFFFFF;
+    width: 78vw;
+    height: 78.1vh;
+    border: 1px gray;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    margin-left: 2vw;
+    float:left;
+}
+.box-wrapper-bottom {
+    margin: 0;
+    margin-top: 1vh;
+    background-color: #FFFFFF;
+    width: 78vw;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    margin-left: 2vw;
+    float: left;
+    /* border: 1px solid #045498 !important; */
+}
+.box-menu{
+    float: left;
+    background-color: #045498;
+    width: 16vw;
+    height: 78vh;
+    padding-left: 1%;
+    padding-top: 0.2%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 17px;
+    overflow: auto;
+}
+.box-folder{
+    background-color: #FFFFFF;
+    width: 22vw;
+    height: 100%;
+    padding-left: 1%;
+    padding-top: 1%;
+    border-right: 1px solid grey;
+    float: left;
+    overflow: auto;
+}
+.box-file{
+    background-color: #FFFFFF;
+    width: 40vw;
+    height: 97%;
+    padding-left: 1%;
+    padding-top: 1%;
+    float: left;
+    overflow: auto;
+    position: relative;
+}
+
+.tempatDragDrop{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #0095FF; 
+  top: 0;
+  right: 0;
+  display: none;
+  z-index: 1001;
+  opacity: 0.6;
+}
+
+#infoDragDrop{
+  text-align: center;
+  padding: auto;
+  padding-top: 30%;
+  color:  #045498;
+  vertical-align: middle;
+  font-size: 4vh;
+  z-index: 1000;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box-floating{
+    margin: 0;
+    background-color: #FFFFFF;
+    width: 78vw;
+    height: 5vh;
+    border: 1px gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    margin-top: 0.2%;
+    margin-left: 2vw;
+}
+.button-menu{
+    border: none;
+    background: none;
+    width: 95%;
+    height: 100%;
+    line-height: 120%;
+    color: white;
+    text-align: left;
+    margin-left: 0%;
+    padding-left: 4%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-radius: 5px;
+    font-size: 1vw;
+}
+.button-menu-isselected{
+    border: none;
+    background-color: #D6212A;
+    width: 95%;
+    height: 100%;
+    line-height: 120%;
+    color: white;
+    text-align: left;
+    margin-left: 0%;
+    padding-left: 4%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-radius: 5px;
+    font-size: 1vw;
+    outline: none;
+}
+
+.button-menu-isselected:hover{
+  background-color: #0095FF;
+  color: white;
+}
+.button-folder{
+    border: none;
+    background: none;
+    width: 95%;
+    height: 100%;
+    line-height: 100%;
+    color: black;
+    text-align: left;
+    margin-left: 0%;
+    padding-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-radius: 2px;
+    font-size: 1vw;
+}
+.button-folder-isselected{
+    border: none;
+    background-color: #0095FF;
+    width: 95%;
+    height: 100%;
+    line-height: 100%;
+    color: white;
+    text-align: left;
+    margin-left: 0%;
+    padding-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-radius: 2px;
+    font-size: 1vw;
+}
+.button-folder-isselected:hover{
+  background-color: #A3A5A8;
+  color: white;
+}
+.buttonFile{
+    border: none;
+    background: none;
+    float: right;
+    border-radius: 2px;
+    margin-top: 0%;
+    margin-right: 3px;
+    padding: 0%;
+    max-width: 22px;
+    width: 100%;
+    min-width: 0px;
+}
+
+.buttonFile:hover{
+  background-color: white;
+  color: black;
+}
+.button-menu:hover{
+  background-color: #0095FF !important;
+}
+.button-menu:hover, .button-folder:hover{
+  background-color: #A3A5A8;
+  color: white;
+}
+.button-menu:focus, .button-folder:focus{
+  background-color: #0095FF;
+  color: white;
+  outline: transparent !important;
+}
+.button-menu:focus~.button-folder:focus{
+  background-color: #0095FF;
+  color: white;
+  outline: transparent !important;
+}
+.fa-folder-open{
+  color: #EEC435;
+}
+
+/* File Box */
+.fa-file-word{
+  color: #295391;
+}
+
+.fa-file-excel{
+  color: #1C6D42;
+}
+
+.fa-file-powerpoint{
+  color: #F46120;
+}
+.fa-file-pdf{
+  color: #ED2224;
+}
+
+.fa-download{
+  color: green;
+}
+
+.isiFile:hover{
+  background-color: #A3A5A8;
+  color: white;
+}
+
+/* .isiFile:focus{
+  background-color: #0095FF;
+  color: white;
+} */
+
+.isiCheckBox{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.isiNamaFile{
+  width: 67vh;
+  height: fit-content;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.isiFileControl{
+  display: table-cell;
+  vertical-align: middle;
+  width: 7vw;
+}
+
+.sizeFile{
+    font-size: 0.9vw;
+    color: grey;
+    vertical-align: middle;
+    position: relative;
+    padding: 0;
+    top: -0.2vw;
+}
+
+.isiIconFile{
+  display: table-cell;
+  vertical-align: middle;
+  width: 1.5vw;
+  text-align: center;
+}
+/* End File Box */
+
+#menu-title{
+    font-weight: bold;
+    display: block;
+    font-size: 1.2vw;
+    color: white;
+}
+
+ul{        
+    padding-left: 5px;
+    list-style: none;
+    margin-top: 0%;
+}
+.li-folder{
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.li-folder::before{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    margin: auto;
+    content: '';
+}
+.li-folder::after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    content: '';
+}
+.li-folder:last-child::after{
+    height: 15px;
+}
+.FolderFocus:hover{
+    background-color: #A3A5A8;
+    color: white;
+}
+.FolderFocus:focus{
+    background-color: #0095FF;
+    color: white;
+}
+.isiFile{
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    margin-bottom: 3px;
+    font-size: 15px;
+    display: table;
+}
+
+.isiFile-isselected{
+    font-family: 'Segoe UI';
+    font-weight: normal;
+    margin-bottom: 3px;
+    font-size: 15px;
+    display: table;
+    background-color: #0095FF;
+    color: white;
+}
+.path-space{
+  float: left;
+  margin-top: 0.6vh;
+  margin-left: 1%;
+  width: 48vw;
+  height: 3.5vh;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 12px;
+  text-align: center;
+}
+.path-title{
+    height: 3.4vh;
+    width: 5vw;
+    background-color: #045498;
+    color: white;
+    padding-top: 0.1%;
+    border-radius: 5px;
+    float: left;
+    font-size: 2vh;
+    margin: 0;
+    margin-left: -0.1vw;
+    margin-top: -0.1vh;
+}
+
+#path{
+    float: left;
+    padding-left: 0.8vh;
+    padding-top: 0.1vh;
+    font-size: 2vh;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 39vw;
+}
+
+.path-open{
+    float: right;
+    height: 3.2vh;
+    min-width: 0px;
+    width: 3vw;
+    border-right: 0.4px solid grey;
+    padding: 0%;
+    font-size: 2vh;
+    background-color: #045498;
+}
+
+.path-open:hover{
+  cursor:pointer;
+  background-color: #0095FF;
+}
+
+.fa-location-arrow{
+  color: white;
+}
+
+.modalBtn:hover, .modalBtnCopy:hover{
+  cursor:pointer;
+  background-color: #0095FF;
+}
+
+
+.modalBtn, .modalBtnCopy{
+    height: 4vh;
+    float: right;
+    margin-right: 1vh;
+    margin-top: 0.4vh;
+    background-color: #045498;
+    border-radius: 1vh;
+    border: 0.3vh solid white;
+    padding: 0px;
+    width: 11vw;
+    font-size: 1vw;
+    color: white;
+}
+.modalBtn .fa-download{
+  color: white;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid lightgray;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: lightgray transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search, .input-search-file, .input-searchModalCopy, .input-search-fileModalCopy{
+    width: 0vh;
+    height: 0vh;
+    border-style: none !important;
+    padding: 2vh !important;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 50px;
+    transition: all .5s ease-in-out;
+    background-color: #F7C327 !important;
+    padding-right: 2vh !important;
+    color: black;
+}
+.input-search-file, .input-search-fileModalCopy{
+  background-color: #045498 !important;
+}
+.input-search::placeholder, .input-search-file::placeholder, .input-searchModalCopy::placeholder, .input-search-fileModalCopy::placeholder{
+  color:lightgray;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+/* Button Search Main */
+.btn-search, .btn-search-file{
+    width: 4.1vh !important;
+    height: 0,5vh !important;
+    border-style: none !important;
+    font-size: 1.5vw !important;
+    font-weight: bold !important;
+    outline: none !important;
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    right: 0px !important;
+    color: black !important;
+    background-color: transparent !important;
+    pointer-events: painted !important;
+    padding: 0;
+    padding-left: -1vh;
+    min-width: 0vh;
+    text-align: center;
+    margin: 0px;
+}
+.btn-search:focus ~ .input-search{
+  width: 38vh !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  border-bottom:0.1vh solid black !important;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2) !important;
+}
+
+.btn-search-file:focus ~ .input-search-file, .input-search-file:active{
+  width: 38vh !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  border-bottom:0.1vh solid black !important;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2) !important;
+}
+
+.input-search:focus, .input-search-file:focus, .input-search-file:active{
+  width:38vh !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  border-bottom:0.1vh solid black !important;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2) !important;
+}
+
+.btn-search:hover, .btn-search-file:hover{
+    border-color: transparent;
+    background-color: transparent;
+}
+
+/* END Search Main */
+
+/* Search Modal */
+.btn-searchModalCopy, .btn-search-fileModalCopy{
+    width: 4.1vh !important;
+    height: 0,5vh !important;
+    border-style: none !important;
+    font-size: 1.5vw !important;
+    font-weight: bold !important;
+    outline: none !important;
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    right: 0px !important;
+    color: black !important;
+    background-color: transparent !important;
+    pointer-events: painted !important;
+    padding: 0;
+    padding-left: -1vh;
+    min-width: 0vh;
+    text-align: center;
+    margin: 0px;
+}
+.btn-searchModalCopy:focus ~ .input-searchModalCopy{
+  width: 38vh !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  border-bottom:0.1vh solid black !important;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2) !important;
+}
+
+.btn-search-fileModalCopy:focus ~ .input-search-fileModalCopy{
+  width: 38vh !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  border-bottom:0.1vh solid black !important;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2) !important;
+}
+
+.input-searchModalCopy:focus, .input-search-fileModalCopy:focus{
+  width:38vh !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+  border-bottom:0.1vh solid black !important;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2) !important;
+}
+
+.btn-searchModalCopy:hover, .btn-search-fileModalCopy:hover{
+    border-color: transparent;
+    background-color: transparent;  
+}
+/* END Search Modal */
+
+
+input[type=text]:hover{
+  border-color: transparent;
+  border-bottom:0.1vh solid black;
+}
+
+input[type=text]:focus{
+  border-color: transparent;
+  border-bottom:0.1vh solid black;
+}
+
+input[type=button]:active, button:active{
+      border-color: white;
+      background-color: white;
+}
+
+input[type="text"]{
+  padding: 0;
+}
+
+/*global search*/
+.box-asearch{
+    margin: 0;
+    background-color: transparent !important;
+    width: 78vw;
+    height: 100%;
+    border: transparent;
+    margin-left: 2vw;
+}
+
+.box-asearch-bottom{
+    margin: auto;
+    background-color: transparent;
+    width: 100%;
+    height: 4vh;
+    border: transparent;
+}
+
+#jumlahSearching{
+  font-size: 0.8em;
+  color: #70757A;
+}
+
+
+
+.advsearch{
+    margin-right: 10;
+    background-color: transparent !important;
+    width: 17vw;
+    border: transparent;
+    border-radius: 5px;
+    padding: 0;
+    margin-left: 61.8vw;
+}
+
+.advsearch-bottom{
+    float: right;
+    margin-right: 10;
+    background-color: transparent;
+    width: 15vw;
+    height: 100%;
+    border: transparent;
+    border-radius: 5px;
+    padding: 0;
+
+}
+
+.advsearch-input, #inputCreateFolder{
+    width: 15vw;
+    border-style: none;
+    padding: 0;
+    outline: none;
+    border-radius: 0.5vw;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    padding-right: 2vw;
+    color: black;
+    pointer-events: painted;
+    border: 1px solid black;
+    margin-left: 1.2vw;
+    height: 2vw;
+    margin-bottom: 0.1vw;
+    padding-left: 0.6vw;
+}
+
+.advsearch-input:hover, .advsearch-input-btm:hover{
+  width:14vw;
+  border: transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid black;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.advsearch-input:focus,.advsearch-input-btm:focus{
+  width:14vw;
+  border: transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid black;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.advsearch-input::placeholder, #inputCreateFolderr::placeholder, .advsearch-input-btm::placeholder{
+  color:lightgray;
+  font-size: 1vw;
+  letter-spacing: 0.2vw;
+  font-weight: 100vw;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.advsearch-button{
+    border-style: none !important;
+    font-size: 1.4vw!important;
+    font-weight: bold !important;
+    outline: none !important;
+    cursor: pointer !important;
+    position: absolute !important;
+    color: black !important;
+    background-color: transparent !important;
+    pointer-events: painted !important;
+    padding: 0;
+    padding-left: -3vh;
+    min-width: 0vh;
+    text-align: center;
+    margin: 0px;
+    margin-left: -1.7vw;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+/*metadata*/
+.metadata-overlay{
+    display: none;
+    width: 17.5vw;
+    height: 75vh;
+    position: fixed;
+    top: 24.5vh;
+    left: 81.2vw;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 0.5vw;
+    background-color: #FFFFFF;
+    border-left: 0.2vw solid #045498;
+    font-size: 1vw;
+    z-index: 1;
+}
+
+.kontenMetadata{
+    position: sticky;
+    width: 100%;
+    height: 35vw;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+.closeButton{
+  float: right;
+  cursor: pointer;
+  padding-right: 0.5vw;
+}
+
+.judulMetadata{
+    border-bottom: 0.2vw solid white;
+    background-color: #045498;
+    border-radius: 0.2vw;
+    color: white;
+    text-align: center;
+    margin-left: -0.1vw;
+}
+
+.ButtonMetadata{
+    position: fixed;
+    width: 10vw;
+    height: 2vw;
+    top: 20vh;
+    left: 88.5vw;
+    bottom: 0px;
+    right: 0px;
+    font-size: 1.2vw;
+    padding: 0;
+    border-radius: 0.8vw;
+    background-color: #045498;
+    color: white;
+}
+
+.ButtonMetadata:hover{
+  background-color: #0095FF;
+  cursor: pointer;
+
+}
+
+/*Bottom Search*/
+#btmsearchTitle{
+    float: left;
+    margin-right: 3vh;
+    background-color: #045498;
+    height: 4vh;
+    width: 16vw;
+    margin-top: 0vh;
+    border-top-left-radius: 0.2vw;
+    color: white;
+    text-align: center;
+}
+
+.advsearch-input-btm{
+    width: 15vw;
+    border-style: none;
+    padding: 0;
+    outline: none;
+    border-radius: 0.5vw;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    padding-right: 2vw;
+    color: black;
+    pointer-events: painted;
+    border: 1px solid black;
+    margin-left: 0;
+    height: 2vw;
+    padding-left: 0.6vw;
+}
+/*navboxatasHilang*/ 
+#noIndex{
+  display:none;
+}
+/*animasi*/ 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+/*gambar belakang*/
+.ms-backgroundImage{
+  /* background-image: url('https://dokumen.bi.go.id/sites/Workspace_Dev/WebPart/image/biBackground.jpg?csf=1&e=lU9S9H'); */
+  background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+.ms-core-overlay {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Modal */
+.modal, .modalCopy, .modalFolder {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.isiModalDownload{
+    background-color: transparent;
+    max-height: 36vh;
+    padding-left: 0.5vw;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+.listModal{
+  margin-top:1vh;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 0;
+  border: 1px solid #888;
+  width: 70% !important; /* Could be more or less, depending on screen size */
+}
+
+.ModalTitle, .ModalTitleFilter{
+  height: fit-content;
+  width: 100%;
+  background-color: #045498;
+  padding: 0;
+  font-size: 1.3vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  vertical-align: middle;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* Modal Download */
+/* The Close Button */
+.closeModal {
+  color: black;
+  background-color: #D6212A;
+  float: right;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2vw;
+  width: 2vw;
+  text-align: center;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #FF000D;
+}
+
+.modalConfirm, .modalCopy-confirm {
+    float: right !important;
+    padding-left: 51vw;
+    padding-bottom: 1vh;
+}
+
+
+
+.modalbtndownload, .modalBtnTutup, .modalbtn-Copy, .modalCopy-btnTutup, .modalbtnupload{
+    margin-top: 2.2vh;
+    width: 8vw;
+    margin-left: 0.5vw;
+    border: transparent;
+    height: 4vh;
+    cursor: pointer;
+    font-size: 0.9vw;
+    padding: 0;
+}
+
+.modalbtndownload, .modalbtn-Copy{
+  background-color: #045498;
+  color: white;
+}
+
+.modalbtndownload .fa-download, .modalbtn-Copy .fa-copy{
+  color: white;
+}
+
+
+
+.modalBtnTutup, .modalCopy-btnTutup{
+    background-color: lightgray;
+    color: black;
+}
+
+.modalBtnTutup .fa-times, .modalCopy-btnTutup .fa-times{
+  color: black;
+}
+
+.modalbtndownload:hover, .modalbtn-Copy:hover{
+  background-color: #0095FF;
+  color: white;
+}
+
+.modalBtnTutup:hover, .modalCopy-btnTutup:hover{
+  background-color: grey;
+  color: black;
+}
+
+/* Modal Download END */
+
+/* Modal Copy Start */
+.modalCopy-Close{
+  color: black;
+  background-color: #D6212A;
+  float: right;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2vw;
+  width: 2vw;
+  text-align: center;
+}
+
+
+
+.modalCopy-Close:hover,
+.modalCopy-Closefocus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #FF000D;
+}
+
+.modalCopy-path{
+  width: 100%;
+  height: 10%;
+}
+
+.modalCopy-pathspace{
+  float: left;
+  overflow: auto;
+  margin-top: 0.6vh;
+  margin-left: 15%;
+  width: 100vh;
+  height: 3.5vh;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 12px;
+  text-align: center;
+}
+.modalCopy-selector{
+    margin-top: 0.5%;
+    height: 33vh;
+    width: 69.6vw;
+    padding-left: 0.8vw;
+}
+
+.modalCopy-selector {
+    border-bottom: 1px solid grey;
+}
+
+#judulKolomUtama, .judulKolomCopy{
+  font-weight: bold;
+  background-color: lightgray;
+}
+.fileToCopy{
+    display: table;
+    margin-bottom: 1vh;
+    border-bottom: 1px solid grey;
+}
+
+.CopyCheckBox{
+  background-color: transparent;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.iconCopyFile{
+  background-color: transparent;
+  display: table-cell;
+  vertical-align: middle;
+  width: 2vw;
+  text-align: center;
+}
+
+.namaCopyFile{
+    background-color: transparent;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2vh;
+}
+
+.selectedFileCopy{
+    background-color: transparent;
+    float: left;
+    width: 22vw;
+    height: 32vh;
+    padding-left: 0.2vw;
+    border-right: 1px solid grey;
+}
+
+.isiSelectedFile{
+  overflow: auto;
+  height: 29vh;
+}
+.modalCopy-folder{
+  background-color: transparent;
+  width: 21vw;
+  height: 32vh;
+  border-right: 1px solid grey;
+  padding-left: 0.2vw;
+  float: left;
+}
+.modalCopy-file{
+    background-color: transparent;
+    width: 25vw;
+    height: 32vh;
+    padding-left: 0.2vw;
+    float: left;
+}
+
+.existingWrapper{
+  display: table;
+  margin-bottom: 0.5vh;
+}
+
+.existingIconFile{
+  display: table-cell;
+  width: 1.2vw;
+  vertical-align: middle;
+}
+
+.existingFileName{
+  display: table-cell;
+  font-size: 2vh;
+}
+
+
+/* Modal Copy END */
+
+.notifDownload{
+  margin-top: 1vh;
+  border-top: 1px solid black;
+  font-size: 0.9vw;
+}
+
+.DocLibSearch{
+  font-size:0.7vw;
+  margin-bottom: 1vh;
+}
+
+.borderSearch{
+  height: 0vh;
+  width: 100%;
+   border-bottom: 0vh solid black;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 1vw;
+    height: 1vh;
+}
+
+input.SearchSeluruh{
+   width : 1.2vw !important;
+    height : 1.2vh !important;
+}
+
+.pathSearching{
+  font-size: 0.6vw;
+  float: right;
+  color: grey;
+}
+
+.button-folder:hover .pathSearching{
+  color: white;
+}
+
+.pathSearching-isselected{
+  font-size: 0.6vw;
+  float: right;
+  color: white;
+}
+
+.btn-search-file .fa-search, .btn-search-fileModalCopy .fa-search{
+  color: white !important;
+}
+
+#FileSearchModalCopy:focus ~ #iconSearchModal{
+  color: black !important;
+}
+
+.urlHasilAsearch:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0095FF;
+}
+
+/* Folder Control */
+.folderControl{
+    float: right;
+    margin-top: -0.5vw;
+    margin-right: -19vw;
+}
+
+.fileControl{
+    position: absolute;
+    margin-top: -4.9vh;
+    left: 29vw;
+    width: 9vw;
+}
+
+.bodyManFolder{
+  width: 100% !important;
+  height: 58% !important;
+}
+
+#kontenModalFolder{
+  width: 25% !important;
+  height: 20% !important;
+}
+
+.modalConfirmFolder{
+    /* float: right !important; */
+    padding-left: 30%;
+    /* padding-bottom: 0vh; */
+    /* padding: 0; */
+}
+
+#modalConfirmDeleteFile{
+  background-color: transparent;
+  position: relative;
+  top: -1vw;
+  margin-bottom: 0vw;
+}
+
+.addFolder, .renameFolder, .deleteFolder{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 2vh;
+    width: fit-content;
+    min-width: fit-content;
+    float: right;
+    opacity: 50%;
+    padding-right: 0.3vw;
+    padding-left: 0.3vw;
+}
+
+.addFolder .fa-upload{
+  color: green;
+}
+
+.addFolder:hover, .renameFolder:hover, .deleteFolder:hover{
+  background-color: transparent;
+  border-color: transparent;
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.addFolder .fa-plus{
+  color: green;
+}
+
+.renameFolder .fa-pen{
+  color: orange;
+}
+
+.deleteFolder .fa-trash-alt{
+  color: red;
+}
+
+.inputRenameFolder{
+  width: 70% !important;
+  margin-top: 10% !important;
+  margin-left: 10% !important;
+}
+
+#inputCreateFolder, #inputRenameFolder{
+    margin-top: 7%;
+    margin-left: 8%;
+    width: 85%;
+}
+
+#inputRenameFolder{
+  margin-top: 0 !important;
+}
+
+#inputCreateFolder:hover, #inputRenameFolder:hover{
+  width:80%;
+  border: transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid black;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+
+}
+
+#inputCreateFolder:focus, #inputRenameFolder:focus{
+  width:80%;
+  border: transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid black;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+#sebelumRename{
+    font-weight: bold;
+    font-size: 1.5vh;
+    margin-top: -1%;
+    margin-bottom: 3%;
+}
+
+
+#judulRename{
+  font-size: 1.4vh;
+}
+
+/* Delete Start */
+#judulDelete{
+  font-size: 1.5vh;
+}
+
+#namaFolderDelete{
+    font-weight: bold;
+    font-size: 1.8vh;
+    margin-top: -1%;
+    margin-bottom: 3%;
+}
+
+#dengan{
+    font-size: 1.4vh;
+    margin-top: -1%;
+}
+
+#infoSubfolderDelete, #infoFileDelete{
+  font-size: 1.4vh;
+}
+
+/* Start Filter */
+.modalFilterClass{
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalFilterClass .modal-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 18vw!important;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    top: -5vh;
+    left: 82vw;
+    height: 74vh !important;
+    z-index: 1; /* Sit on top */
+    overflow: auto;
+    background-color: white; /* Fallback color */
+}
+#tempatFilter{
+    width: 14.5vw;
+    background-color: #FFFFFF;
+    float: left;
+    margin-left: 0.5vw;
+    margin-top: 0.4%;
+    height: 78.1vh;
+    border: 1px gray;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    overflow: auto;
+    display: none;
+}
+
+#clearFilter{
+    width: 2vw;
+    min-width: auto;
+    min-height: auto;
+    height: 4vh;
+    padding: 0;
+    float: right;
+    margin-top: 1vh;
+    margin-right: 0.3vw;
+    background-color: #045498;
+    border: transparent;
+    border-radius: 1vh;
+}
+
+#clearFilter:hover, #clearSort:hover{
+  background-color: #0095FF;
+  cursor: pointer;
+}
+
+#clearFilter:disabled, #clearSort:disabled{
+  background-color: lightgray;
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
+#clearFilter .fa-filter{
+    font-size: 2.5vh !important;
+    color: white !important;
+    top: -45%;
+    position: relative;
+}
+
+#crossFilter{
+    margin-left: -36% !important;
+    margin-bottom: 11% !important;
+    padding-bottom: -59% !important;
+    position: relative !important;
+    top: -41% !important;
+    color: red !important;
+    font-size: 2vh !important;
+}
+
+#judulFilter{
+  font-size: 4vh;
+  margin-left: 3%;
+}
+.listFilter{
+  margin-top: 3%;
+}
+#bodyFilter, #modalListFilter {
+  margin-left: 3%;
+}
+
+#bodyFilter{
+  margin-bottom: 2vh;
+}
+.judulListFilter{
+  font-size: 1.2vw;
+}
+.allFilter{
+  color: #0095FF;
+  text-decoration: underline;
+  font-size: 1vw;
+  width: fit-content;
+}
+
+.allFilter:hover{
+  cursor: pointer;
+  color: #045498;
+}
+
+.isiFilter{
+  color:grey;
+  font-size: 1vw;
+}
+/* End Filter */
+
+/* Start Sorting */
+#tempatSorting{
+  background-color: transparent;
+  width: 13.6vw !important;
+  height: 11vh;
+  float: left;
+  padding-left:2%;
+  border-bottom: 1px solid grey;
+}
+
+#btnAtasBawah{
+    min-width: 0vw;
+    min-height: 0vh;
+    width: 2vw;
+    height: 3.2vh;
+    padding-left: 0.9vh;
+    padding-top: 0vh;
+    font-size: 2vh;
+    margin-left: -1%;
+}
+
+#btnAtasBawah:hover{
+  color: #0095FF;
+  cursor: pointer;
+}
+
+#clearSort{
+    min-width: 0vw;
+    min-height: 0vh;
+    width: 1.5vw;
+    height: 3vh;
+    font-size: 1vw;
+    padding-left: 0.4vh;
+    padding-top: 0;
+    margin-left: 0.5vw;
+}
+
+#sortSelect{
+  font-size: 2vh;
+}
+
+#crossSort{
+  color: red;
+  position: relative;
+  top: -2.7vh;
+  font-size: 1.8vh;
+  left: 0.5vw;
+}
+
+#judulSorting{
+  font-weight: bold;
+}
+
+#advanceSort{
+  background-color: transparent;
+  font-size: 2vh;
+  margin-top: -0.4vh;
+  margin-left: 0vw;
+}
+
+#modalListFilter{
+  background-color: transparent;
+}
+
+.checkboxSorting{
+  background-color: transparent;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.urutanSotring{
+  background-color: transparent;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 1.5vw;
+}
+
+.isiSorting{
+  background-color: transparent;
+  display: table-cell;
+  width: 12vw;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.buttonSorting{
+  background-color: transparent;
+}
+
+.listParamSorting{
+  background-color: transparent;
+  display: table;
+  height: fit-content;
+  width: 17vw;
+  margin-top: 0.5vh;
+}
+
+.btnSortingModal{
+  width: 2vw;
+  min-width: 0vw;
+  min-height: 0vw;
+  height: 4vh;
+  padding-left: 0.5vw;
+  padding-top: 0;
+}
+
+.btnSortingModal:hover{
+  background-color: #0095FF;
+  cursor: pointer;
+}
+
+
+
+
+/* End Sorting */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #D6212A; 
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: white; 
+}
+
+.btn-outline-secondary-isselected{
+  background-color: #045498 !important; 
+  color: white !important;
+
+}
+
+/* START Filter Search */
+input.boxFilterSearch {
+    width: 0.8vw;
+    height: 0.8vw;
+}
+
+
+span#filterSearch {
+    display: inline-block;
+    width: 45vw;
+    background-color: transparent;
+    padding-left: 37vw;
+    font-size: 0.7vw;
+    color: black;
+    z-index: 10000;
+}
+.filterSearch0{
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    top: 0vh;
+}
+.filterSearch1{
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    top: 0vh;
+}
+.filterSearch2{
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  left: 4vw;
+  top: -4.2vh;
+}
+.filterSearch3{
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    left: 4vw;
+    top: -4.2vh;
+}
+/* END Filter Search */
+
+/*Biar Jadi Modern Site  */
+#O365_NavHeader{
+background-color: #045498 !important;
+color: white;
+}
+
+/* .o365cs-base .ms-bgc-tp{
+  background-color: #045498 !important;
+}
+
+.ms-cui-ribbonTopBars{
+  display: none !important;
+}
+
+.ms-cui-tabContainer{
+  display: none !important;
+}  
+
+.globalNavBox{
+  display: none !important;
+}
+
+#s4-ribbonrow{
+  display: none !important;
+} */
+
+.ms-webpart-zone {
+    display: table;
+    background-color: transparent;
+    position: relative;
+    top: -2vw;
+}
+
+.hideTampilan {
+  display: none;
+  padding-left: 5000px;
+}
+

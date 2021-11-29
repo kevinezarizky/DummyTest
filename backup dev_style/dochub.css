@@ -1,0 +1,1270 @@
+/*START Modern Site */
+/* Body DIVE */
+.btnPagination {
+    display: inline-flex;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  top: 30%;
+  left: 30%;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid lightgray;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: lightgray transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* LOGO */
+#longLogo {
+    height: auto;
+    width: 120px;
+    position: fixed;
+    top: 15px;
+    left: 20px;
+}
+
+#body {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins';
+}
+
+/* Top Bar */
+#suiteBarDelta {
+  display: none !important;
+}
+
+/* Printilan */
+#sideNavBox {
+  display: none !important;
+}
+
+#contentBox {
+  margin-left: 0;
+}
+
+#siteIcon {
+  display: none !important;
+}
+
+#titleAreaRow {
+  display: none !important;
+}
+
+/* END Modern Site */
+
+/* START Layout */
+/* Primary Menu */
+#boxMenu {
+  float: left;
+  height: 100%;
+  width: 20vw;
+  position: relative;
+  background-image: linear-gradient(to top, rgba(6, 86, 149, .9), rgba(38, 125, 194, 1)), url('https://dokumen.bi.go.id/sites/Workspace_Dev/WebPart/asset/image/backgroundBatik.png');
+  background-size: cover, contain;
+  transition: all ease .5s;
+  box-shadow: 5px 11vh 5px rgb(0 0 0 / 40%);
+  z-index: 2;
+}
+
+/* Secondary Menu */
+#boxFolder {
+  float: left;
+  position: relative;
+  height: 100%;
+  width: 20vw;
+  background-image: linear-gradient(to top, rgba(219, 224, 228, .8), rgba(237, 244, 249, 1)), url('https://dokumen.bi.go.id/sites/Workspace_Dev/WebPart/asset/image/backgroundSongket.png');
+  background-size: cover, contain;
+  transition: all ease .5s;
+  box-shadow: 5px 11vh 5px rgb(0 0 0 / 40%);
+  z-index: 1;
+  /* left: 2vw;
+    transition-duration: 1000ms; */
+}
+
+/* #primaryMenu:hover~#secondaryMenu{
+    transform: translate(18vw,0);
+  } */
+
+/* Fold */
+#boxMenu:before,
+#boxFolder:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 5vw 5vw 0;
+  transition: all ease .5s;
+  box-shadow: -4px 4px 5px rgb(0 0 0 / 25%);
+}
+
+#boxMenu:before {
+  border-color: #267dc2 #ECF3F8;
+}
+
+#boxFolder:before {
+  border-color: #edf4f9 #ffffff;
+}
+
+/* Konten */
+#boxKonten {
+    float: right;
+    width: 60vw;
+    height: 100%;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url("https://dokumen.bi.go.id/sites/Workspace_Dev/WebPart/asset/image/backgroundOrnamen.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 247px;
+}
+
+/* END Layout */
+
+/* START Menu */
+#judulMenu {
+  width: 100%;
+  height: 5.5vw;
+  vertical-align: middle;
+  padding-left: 1vw;
+  line-height: 5.5vw;
+  color: white;
+  font-size: 3rem;
+  /* background-color: red; */
+}
+
+/* Resort Menu */
+#sortMenu {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 30px;
+    min-width: 0px;
+    height: 30px;
+    position: relative;
+    left: 65px;
+    padding-bottom: -8px;
+    cursor: pointer;
+}
+i.fas.fa-sort {
+    position: relative;
+    top: -12px;
+    left: -7px;
+    font-size: 35px;
+    color: white;
+}
+
+
+
+.boxWorkspace {
+  width: 80%;
+  height: 6vh;
+  background-color: red;
+  text-align: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  line-height: 6vh;
+  vertical-align: middle;
+  background-image: linear-gradient(to left, rgba(208, 34, 44, .9), rgba(229, 3, 19, .99)), url('https://dokumen.bi.go.id/sites/Workspace_Dev/WebPart/asset/image/backgroundWorkspace.png');
+  background-size: cover, 80%;
+}
+
+.logoWorkspace {
+  width: auto;
+  height: 15px;
+}
+
+.judulWorkspace {
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  margin-left: 7px;
+}
+
+.listMenu {
+  list-style-type: none;
+  padding-left: 0%;
+  margin-left: 0%;
+  margin-top: 1%;
+  margin-bottom: 2% !important;
+}
+
+/* Button Menu */
+.buttonMenu {
+  border: none;
+  background: none;
+  width: 95%;
+  height: 100%;
+  line-height: 80%;
+  color: white;
+  text-align: left;
+  margin-left: 1%;
+  padding-left: 4%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-radius: 5px;
+  font-size: 1vw;
+}
+
+.buttonMenu:hover {
+  background-color: #0095FF !important;
+}
+
+.buttonMenu-isselected {
+  border: none;
+  background-color: #0e4674;
+  width: 95%;
+  height: 100%;
+  line-height: 80%;
+  color: white;
+  text-align: left;
+  margin-left: 1%;
+  padding-left: 4%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-radius: 5px;
+  font-size: 1vw;
+  outline: none;
+}
+
+.buttonMenu-isselected:hover {
+  background-color: #0095FF;
+  color: white;
+}
+
+/* END Menu */
+
+/* START Folder */
+#kontenFolder {
+  overflow: auto;
+  height: 80%;
+}
+
+#judulFolder {
+  background-color: transparent;
+  width: 100%;
+  height: 9vw;
+  padding-top: 12vh;
+}
+
+ul {
+  padding-left: 5px;
+  list-style: none;
+  margin-top: 0%;
+}
+
+.liFolder {
+  font-size: 14px;
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.liFolder::before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 10px;
+  height: 1px;
+  margin: auto;
+  content: '';
+}
+
+.liFolder::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  content: '';
+}
+
+.liFolder:last-child::after {
+  height: 15px;
+}
+
+.buttonFolder,
+.buttonFolder-isselected,
+.resultFolder,
+.resultFolder-isselected {
+  border: none;
+  background: none;
+  width: 95%;
+  height: 100%;
+  line-height: 100%;
+  text-align: left;
+  margin-left: 0%;
+  padding-left: 5%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-radius: 2px;
+  font-size: 1vw;
+}
+
+.resultFolder,
+.resultFolder-isselected {
+  margin-left: 3% !important;
+}
+
+.buttonFolder {
+  color: black;
+}
+
+.button-folder:hover,
+.resultFolder:hover {
+  background-color: #A3A5A8;
+  color: white;
+}
+
+.buttonFolder-isselected,
+.resultFolder-isselected {
+  background-color: #0095FF;
+  color: white;
+  outline: transparent !important;
+}
+
+.buttonFolder-isselected:hover,
+.resultFolder-isselected:hover {
+  background-color: #A3A5A8;
+  color: white;
+}
+
+.pathFolder {
+  font-size: 0.6vw;
+  float: right;
+  color: grey;
+}
+
+.buttonFolder:hover .pathFolder {
+  color: white;
+}
+
+.pathFolder-isselected {
+  font-size: 0.6vw;
+  float: right;
+  color: white;
+}
+
+.iconFolder {
+  width: auto;
+  height: 15px;
+  vertical-align: bottom;
+}
+/* END Folder */
+
+/* START Global Search */
+#containerglobalSearch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+input#searchGlobal {
+    width: 300px;
+}
+/* END Global Search */
+
+/* START Cataloging */
+input[type=button]:focus, button:focus {
+    outline: none !important;
+}
+/* input[type=button]:active, button:active, input[type=button]:focus, button:focus{
+      border-color: transparent !important;
+      background-color: transparent !important;
+      outline: none;
+} */
+
+/* .x-btn:focus, .button:focus, [type="submit"]:focus {
+   outline: none;
+} */
+
+#catalogFile{
+  display: inline-grid;
+}
+#menuCatalog{
+    display: table-row;
+    font-size: 12px;
+    margin-left: 5px;
+    background-color: #FFFFFF;
+    z-index: 10;
+    margin-top: 8px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 7%);
+    border-radius: 7px;
+}
+#basicCatalog, #advanceCatalog{
+  display: none;
+  padding: 10px;
+  width: 195px;
+}
+#advanceCatalog {
+    border-left: 1px solid rgba(220, 220, 220, .5);
+}
+#btnopenCatalog{
+    cursor: pointer;
+    border: transparent;
+    height: 22px;
+    width: 42px;
+    min-width: 0px;
+    border-radius: 5px;
+}
+#btnopenCatalog:hover{
+  background-color: transparent;
+}
+.iconCatalog{
+    height: auto;
+    width: 23px;
+    position: relative;
+    left: -4px;
+    top: -10px;
+}
+.iconCatalog:hover{
+  width: 30px !important;
+}
+#judulSorting, #judulFilter, .juduladvanceCatalog{
+  font-weight: bold;
+  font-size: 14px !important;
+}
+.judulListFilter{
+  font-weight: bold;
+}
+/* Sorting */
+#menuSorting {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(220, 220, 220, .5);
+}
+#sortSelect {
+    border-radius: 8px;
+    background-color: #F6F6F6;
+    background-image: url("https://dokumen.bi.go.id/sites/Workspace_Dev/WebPart/asset/image/sortSelectArrow.svg");
+    background-repeat: no-repeat;
+    background-position-x: 115px;
+    background-position-y: -1px;
+    -webkit-appearance: none;
+    width: 140px;
+    height: 25px;
+    padding-left: 5px;
+}
+#iconSort {
+    width: auto;
+    height: 15px;
+    position: relative;
+    top: -5px;
+    left: -4px;
+}
+.btnSort {
+  cursor: pointer;
+    min-width: 0px;
+    min-height: 0px;
+    border-radius: 8px;
+    width: 27px;
+    height: 25px;
+    background-color: #F6F6F6;
+}
+/* Filtering */
+#menuFilter {
+    margin-top: 7px;
+}
+#tempatFilter{
+  overflow-y: auto;
+  height: 200px;
+}
+.checkFilter{
+  margin-bottom: 1%;
+  
+}
+.listFilter {
+    margin-top: 5px;
+}
+.listIsiFilter, #kontenadvanceCatalog {
+    margin-left: 5px;
+    color: #949494;
+    font-size: 10px;
+    font-weight: bold;
+}
+.allFilter{
+  color: #0095FF;
+  text-decoration: underline;
+  width: fit-content;
+  font-size: 10px;
+}
+
+.allFilter:hover{
+  cursor: pointer;
+  color: #045498;
+}
+
+/* Advance Catalog */
+#kontenadvanceCatalog {
+    height: 280px;
+    overflow-y: auto;
+}
+/* Advance Sorting */
+.checkboxSorting {
+    background-color: transparent;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.urutanSorting {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 14px;
+}
+.isisortAdvance {
+    display: table-cell;
+    width: 115px;
+    vertical-align: middle;
+}
+#advancebuttonSorting {
+    display: table-cell;
+}
+
+/* Advance Filtering */
+.containerfilterAdvance {
+    display: table-row;
+    height: 21px;
+}
+.checkBoxadvanceFilter {
+    display: table-cell;
+    background-color: red;
+}
+.isifilterAdvance {
+    display: table-cell;
+    width: 150px;
+    padding-left: 5px;
+}
+/* END Cataloging */
+
+/* START Multiple Selected */
+#mutipleFile {
+    position: fixed;
+    top: 81px;
+    right: 20px;
+}
+.buttonSelected:hover{
+  cursor:pointer;
+  background-color: #045498;
+  color: white;
+}
+.buttonSelected{
+    height: 25px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #045498;
+    padding: 0px;
+    width: 130px;
+    font-size: 12px;
+    color: #045498;
+    vertical-align: middle;
+}
+/* END Multiple Selected */
+
+/* START Navigating */
+#boxNavigating {
+    height: 100%;
+}
+#globalSearch {
+  background-color: transparent;
+  width: 100%;
+  height: 10vh;
+}
+
+#headerKonten {
+  background-color: transparent;
+  width: 100%;
+  height: 6vh;
+}
+
+#searchFile {
+  background-color: transparent;
+  margin-left: 3vw;
+  line-height: 7.8vh;
+}
+
+#navigatingKonten {
+    overflow-y: auto;
+    height: 74%;
+    width: 99%;
+    margin-top: 3vh;
+}
+
+.containerFile,
+.containerFile-isselected,
+.containerheaderFile {
+  font-weight: normal;
+  font-size: 15px;
+  display: table;
+  width: 100%;
+}
+
+.containerFile,
+.containerFile-isselected {
+  height: 65px;
+}
+
+.containerheaderFile {
+  height: 10px;
+  width: 98.4%;
+  margin-top: 3%;
+}
+
+.containerFile:hover {
+  background-color: #A3A5A8;
+  color: black;
+}
+
+.containerFile-isselected {
+  background-color: rgba(22, 168, 245, .1);
+  color: black;
+}
+
+.headerFile {
+  text-align: center !important;
+  font-weight: bold;
+  font-size: 1rem !important;
+}
+
+.controlFile.headerFile {
+  padding-right: 152px;
+}
+
+.checkboxFile {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 40px;
+}
+
+.iconFile {
+  display: table-cell;
+  vertical-align: middle;
+  max-width: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.namaFile {
+  max-width: 300px;
+  width: 300px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.namaFile::selection {
+  background: #D6212A;
+}
+
+.extensionFile {
+  width: auto;
+  height: 30px;
+}
+
+.sizeFile {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70px;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.controlFile {
+  display: table-cell;
+  vertical-align: middle;
+  width: 280px;
+  padding-left: 24px;
+}
+
+.buttonFile {
+  cursor: pointer;
+  border: 1px solid #16A2F5;
+  background: none;
+  border-radius: 5px;
+  margin-top: 0%;
+  padding: 0%;
+  max-width: 25px;
+  width: 100%;
+  min-width: 0px;
+  margin-left: 5px !important;
+}
+
+.buttonFile:hover {
+  background-color: white;
+  color: black;
+}
+
+.iconbuttonFile {
+  width: auto;
+  height: 11px;
+  vertical-align: baseline;
+
+}
+
+/* Collapsing Metadata */
+.collapsibleFile {
+  font-size: 12px;
+  padding: 0 35px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(220, 220, 220, .5);
+}
+
+.metadataOpen {
+  border: 1px solid #d6212a !important;
+}
+
+.detailFile {
+  font-size: 18px !important;
+  font-weight: bold;
+  height: 20px;
+  margin-top: 3%;
+}
+
+.detailnamaDokumen {
+  color: gray;
+  margin-bottom: 3%;
+}
+
+.judulmetadataFile {
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.kirimetadataFile,
+.kananmetadataFile {
+  width: 320px;
+  display: table-cell;
+}
+
+.isimetadataFile {
+  margin-bottom: 3%;
+}
+
+.kananmetadataFile {
+  padding-left: 30px;
+}
+/* END Navigating */
+
+/* START Search */
+.buttonSearch {
+  border-style: none !important;
+  font-size: 17px !important;
+  font-weight: bold !important;
+  outline: none !important;
+  cursor: pointer !important;
+  position: absolute !important;
+  color: black !important;
+  background-color: transparent !important;
+  pointer-events: painted !important;
+  padding: 0;
+  padding-left: -3vh;
+  min-width: 0vh;
+  text-align: center;
+  margin: 0px;
+  margin-left: -1.7vw;
+}
+
+.iconSearch {
+  width: auto;
+  height: 2.8vh;
+}
+
+.inputSearch {
+  width: 15vw;
+  border-style: none;
+  padding: 0;
+  outline: none;
+  border-radius: 0.5vw;
+  transition: all .5s ease-in-out;
+  background-color: white;
+  padding-right: 2vw;
+  color: black;
+  pointer-events: painted;
+  border: 1px solid black;
+  margin-left: 1.2vw;
+  height: 2vw;
+  margin-bottom: 0.1vw;
+  padding-left: 0.6vw;
+}
+
+.inputSearch:hover {
+  width: 14vw;
+  border: transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #d6212a !important;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.inputSearch:focus {
+  width: 14vw;
+  border: transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #d6212a !important;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.inputSearch::placeholder {
+  color: gray;
+  font-size: 1vw;
+  letter-spacing: 0.2vw;
+  font-weight: 100vw;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: right;
+  padding-right: 20px !important;
+}
+
+/* END Search */
+
+/* START MODAL TO BE REFACTOR */
+/* Modal */
+#universalModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.kontenModal {
+    background-color: #fefefe;
+    margin: 8% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: fit-content;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 50%);
+    border-radius: 10px;
+}
+.judulModal {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    height: 50px;
+}
+.closeModal {
+    float: right;
+    position: relative;
+    top: -8px;
+    left: 6px;
+    cursor: pointer;
+    width: 30px;
+}
+#iconcloseModal {
+    width: auto;
+    height: 25px;
+}
+#iconcloseModal:hover {
+    width: auto;
+    height: 30px;
+}
+
+/* Modal Copy */
+.bodyCopy {
+    display: table-row;
+    width: fit-content;
+    height: 100%;
+}
+.fileCopy, .folderCopy, .existingCopy {
+    float: left;
+    width: 300px;
+    height: 300px;
+    border-right: 2px solid rgba(220, 220, 220, .5);
+}
+.existingCopy{
+  border-right: none !important;
+}
+#headerCopy, .headerCopy {
+    text-align: center;
+    border-bottom: 2px solid rgba(220, 220, 220, .5);
+    font-weight: bold;
+}
+.kolomCopy {
+    height: 92%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: auto;
+    font-size: 13px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.iconbtnCopy {
+    width: auto;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.existingWrapper, .filetoCopy {
+    margin-bottom: 10px;
+}
+.extensionCopy {
+    width: auto;
+    height: 20px;
+}
+
+/* Modal Download  */
+.bodyDownload {
+    width: 500px;
+    height: 100%;
+}
+.listDownload {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: auto;
+}
+.iconbtnDownload {
+    width: auto;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.filetoDownload {
+    margin-bottom: 10px;
+}
+.extensionDownload {
+    width: auto;
+    height: 20px;
+}
+.grupdownloadModal {
+  margin-top: 8px;
+  position: relative;
+  left: 56%;
+}
+
+/* Modal Confirm */
+.confirmModal {
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+.notifCopy {
+    font-weight: bold;
+    font-size: 13px;
+}
+.grupbuttonModal {
+  position: fixed;
+  right: 18%;
+}
+.btnconfirmModal, .btntutupModal{
+    color: white;
+    border-radius: 10px;
+    height: 35px;
+    border: none;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+.btnconfirmModal{
+    background: linear-gradient(to right, rgba(35,122,191,255), rgba(6,86,149,255));
+}
+.btnconfirmModal:hover{
+    background: #0f89e8;
+}
+.btntutupModal{
+  background: linear-gradient(to right, rgba(255,0,13,255), rgba(214,33,42,255));
+}
+.btntutupModal:hover{
+    background: #FB1420;
+}
+
+/* LAMA */
+.isiModalDownload{
+    background-color: transparent;
+    max-height: 36vh;
+    padding-left: 0.5vw;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+.listModal{
+  margin-top:1vh;
+}
+
+/* Modal Content/Box */
+
+
+.ModalTitle, .ModalTitleFilter{
+  height: fit-content;
+  width: 100%;
+  background-color: #045498;
+  padding: 0;
+  font-size: 1.3vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  vertical-align: middle;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* Modal Download */
+/* The Close Button */
+
+
+.modalConfirm, .modalCopy-confirm {
+    float: right !important;
+    padding-left: 51vw;
+    padding-bottom: 1vh;
+}
+
+
+
+.modalbtndownload, .modalBtnTutup, .modalbtn-Copy, .modalCopy-btnTutup, .modalbtnupload{
+    margin-top: 2.2vh;
+    width: 8vw;
+    margin-left: 0.5vw;
+    border: transparent;
+    height: 4vh;
+    cursor: pointer;
+    font-size: 0.9vw;
+    padding: 0;
+}
+
+.modalbtndownload, .modalbtn-Copy{
+  background-color: #045498;
+  color: white;
+}
+
+.modalbtndownload .fa-download, .modalbtn-Copy .fa-copy{
+  color: white;
+}
+
+
+
+.modalBtnTutup, .modalCopy-btnTutup{
+    background-color: lightgray;
+    color: black;
+}
+
+.modalBtnTutup .fa-times, .modalCopy-btnTutup .fa-times{
+  color: black;
+}
+
+.modalbtndownload:hover, .modalbtn-Copy:hover{
+  background-color: #0095FF;
+  color: white;
+}
+
+.modalBtnTutup:hover, .modalCopy-btnTutup:hover{
+  background-color: grey;
+  color: black;
+}
+
+/* Modal Download END */
+
+/* Modal Copy Start */
+.modalCopy-Close{
+  color: black;
+  background-color: #D6212A;
+  float: right;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2vw;
+  width: 2vw;
+  text-align: center;
+}
+
+
+
+.modalCopy-Close:hover,
+.modalCopy-Closefocus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #FF000D;
+}
+
+.modalCopy-path{
+  width: 100%;
+  height: 10%;
+}
+
+.modalCopy-pathspace{
+  float: left;
+  /* overflow: auto; */
+  margin-top: 0.6vh;
+  margin-left: 15%;
+  width: 46vw;
+  height: 3.5vh;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 12px;
+  text-align: center;
+}
+.modalCopy-selector{
+    margin-top: 0.5%;
+    height: 33vh;
+    width: 69.6vw;
+    padding-left: 0.8vw;
+}
+
+.modalCopy-selector {
+    border-bottom: 1px solid grey;
+}
+
+#judulKolomUtama, .judulKolomCopy{
+  font-weight: bold;
+  background-color: lightgray;
+}
+.fileToCopy{
+    display: table;
+    margin-bottom: 1vh;
+    border-bottom: 1px solid grey;
+}
+
+.CopyCheckBox{
+  background-color: transparent;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.iconCopyFile{
+  background-color: transparent;
+  display: table-cell;
+  vertical-align: middle;
+  width: 2vw;
+  text-align: center;
+}
+
+.namaCopyFile{
+    background-color: transparent;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2vh;
+}
+
+.selectedFileCopy{
+    background-color: transparent;
+    float: left;
+    width: 22vw;
+    height: 32vh;
+    padding-left: 0.2vw;
+    border-right: 1px solid grey;
+}
+
+.isiSelectedFile{
+  overflow: auto;
+  height: 29vh;
+}
+.modalCopy-folder{
+  background-color: transparent;
+  width: 21vw;
+  height: 32vh;
+  border-right: 1px solid grey;
+  padding-left: 0.2vw;
+  float: left;
+}
+.modalCopy-file{
+    background-color: transparent;
+    width: 25vw;
+    height: 32vh;
+    padding-left: 0.2vw;
+    float: left;
+}
+
+.existingWrapper{
+  display: table;
+  margin-bottom: 0.5vh;
+}
+
+.existingIconFile{
+  display: table-cell;
+  width: 1.2vw;
+  vertical-align: middle;
+}
+
+.existingFileName{
+  display: table-cell;
+  font-size: 2vh;
+}
+/* Modal Copy END */
+
+/* Modal Request */
+.bodyAkses {
+    width: 530px;
+}
+#textareaRequest{
+  margin-top: 10px;
+}
+/* END MODAL */
+
+/* START Scroll Bar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #939393;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: white;
+}
+
+/* END Scroll Bar */
+
+/* hide tampilan Drag */
+.hideTampilan {
+  display: none;
+  padding-left: 5000px;
+}
